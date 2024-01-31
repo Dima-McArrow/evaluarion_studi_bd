@@ -1,6 +1,7 @@
-# Evaluation Studi BD 01/2024
+# Évaluation Studi BD 01/2024
 
-### Base de donnees de gestion d'un reseau de cinemas.
+### Créer et administrer une base de données
+GDWFSCAUBDDEXAIII2A
 
 
 Realisee par ***Dimitri MAKAROV*** le *29.01.2024*
