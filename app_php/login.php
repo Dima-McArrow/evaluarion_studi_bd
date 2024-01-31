@@ -27,10 +27,10 @@ try {
   if ($stmt->execute()) {
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
     if ($user === false) {
-      // Si aucun utilisateur ne correspond au login entré, on affiche une erreur
+      // si aucun utilisateur ne correspond au login entré, on affiche une erreur
       echo 'Identifiants invalides';
     } else {
-      // On vérifie le hash du password
+      // vérifier le hash du password
       if (password_verify($password, $user['password'])) {
         echo 'Bienvenue ' . $user['name'];
         header("Location: seance_page.php");

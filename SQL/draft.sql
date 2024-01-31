@@ -1,6 +1,6 @@
 SELECT * FROM cinemas;
 
-
+-- modifie la valeure de la colone movie_id
 ALTER TABLE cinema_app_db.seances MODIFY `movie_id` DECIMAL(5, 2);
 
 SELECT * FROM cinema_app_db.salles;
@@ -13,8 +13,10 @@ DESCRIBE cinema_app_db.movies;
 
 DESCRIBE cinema_app_db.seances;
 
+-- tickets et leurs prix
 SELECT * FROM cinema_app_db.tickets JOIN prices ON tickets.price_id = prices.id;
 
+-- séances et les ID des salles corréspondantes
 SELECT * FROM cinema_app_db.seances JOIN cinema_app_db.salles ON seances.salle_id = salles.id;
 
 CREATE TABLE cinema_app_db.seances (
@@ -46,6 +48,7 @@ JOIN
 
 SELECT * FROM cinema_app_db.cinemas;
 
+-- reinitializer la table tickets
 TRUNCATE TABLE cinema_app_db.tickets;
 
 
@@ -74,6 +77,7 @@ SELECT * FROM cinema_app_db.cin_admins;
 SHOW TABLES;
 
 
+-- la condition que uniquement l'admin qui travail dans un cinéma peut modifier les séances de ce cinéma
 DELIMITER //
 CREATE TRIGGER before_seances_update
 BEFORE UPDATE
@@ -91,6 +95,8 @@ BEGIN
 END //
 DELIMITER;
 
+
+-- créer les utilisateurs qui ont access que à la table seances
 CREATE USER 'user_name'@'localhost' IDENTIFIED BY 'p4$$w0rd';
 GRANT SELECT, INSERT, UPDATE, DELETE ON cinema_app_db.seances TO 'user_name'@'localhost';
 
