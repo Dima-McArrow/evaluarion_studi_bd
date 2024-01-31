@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="Styles\bootstrap.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="h1 mt-5">Admin Login</h1>
+    <form action="login.php" method="post">
+      <div class="mb-3">
+        <label for="name" class="form-label">Votre nom:</label>
+        <input type="text" class="form-control" id="name" name="name">
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password:</label>
+        <input type="password" class="form-control" id="password" name="password">
+      </div>
+      <button type="submit" class="btn btn-primary">Login</button>
+      <a href="index.html" class="btn btn-danger">Retour à la page principale</a>
+    </form>
+  </div>
+</body>
+</html>

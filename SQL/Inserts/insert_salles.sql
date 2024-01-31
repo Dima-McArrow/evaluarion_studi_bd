@@ -1,0 +1,31 @@
+INSERT INTO salles (name, places, cinema_id) VALUES 
+(
+  'Blanche',
+  100,
+  4
+),
+(
+  'Noire',
+  150,
+  4
+),
+(
+  'Lumiere',
+  70,
+  5
+),
+(
+  '777',
+  150,
+  5
+),
+(
+  'Rex',
+  130,
+  4
+),
+(
+  'Moscou',
+  80,
+  4
+);
